@@ -4,6 +4,7 @@ import WelcomeSection from "@/components/sections/WelcomeSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import SkillsSection from "@/components/sections/SkillsSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 import EducationSection from "@/components/sections/EducationSection";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function ResumePage() {
       <ExperienceSection />
       <SkillsSection />
       <EducationSection />
+      <CertificationsSection />
       <footer className="px-6 py-4 text-center text-terminal-muted text-xs border-t border-terminal-border">
         Made with &lt;3 by Carlos Tavares
       </footer>

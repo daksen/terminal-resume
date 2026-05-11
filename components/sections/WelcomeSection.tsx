@@ -21,7 +21,7 @@ const sections = [
   { label: "experience", href: "#experience" },
   { label: "skills", href: "#skills" },
   { label: "education", href: "#education" },
-  { label: "terminal", href: "/terminal" },
+  { label: "certifications", href: "#certifications" },
 ];
 
 export default function WelcomeSection() {

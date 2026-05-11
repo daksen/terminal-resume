@@ -9,7 +9,11 @@ export default function AboutSection() {
       <div className="flex flex-col sm:flex-row gap-6">
         {/* Bio */}
         <div className="flex-1">
-          <p className="text-terminal-text mb-4 leading-relaxed">{profile.bio}</p>
+          {profile.bio.map((paragraph, i) => (
+            <p key={i} className="text-terminal-text mb-4 leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
 
           <div className="flex flex-col sm:flex-row sm:justify-between gap-1 text-sm">
             <div className="flex flex-col gap-1">

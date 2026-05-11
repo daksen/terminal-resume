@@ -1,3 +1,4 @@
+import SectionHeadline from "@/components/SectionHeadline";
 import TerminalPrompt from "@/components/TerminalPrompt";
 import { education } from "@/lib/data";
 
@@ -8,10 +9,11 @@ export default function EducationSection() {
 
       <div className="space-y-6">
         {education.map((e) => (
-          <div key={e.institution} className="border-l-2 border-terminal-border pl-4">
-            <div className="text-terminal-cyan text-sm mb-1">{e.institution}</div>
-            <div className="text-terminal-text font-bold mb-1">{e.degree}</div>
-            <div className="text-terminal-muted text-xs">{e.period}</div>
+          <div key={e.institution}>
+            <SectionHeadline primary={e.institution} meta={e.period} />
+            <div className="border-l-2 border-terminal-border pl-4">
+              <div className="text-terminal-text text-sm">{e.degree}</div>
+            </div>
           </div>
         ))}
 
