@@ -19,7 +19,7 @@ export default function SkillsSection() {
                   className="inline-flex items-center gap-1.5 text-sm text-terminal-purple border border-terminal-border px-2 py-0.5 rounded"
                 >
                   <img
-                    src={`https://cdn.simpleicons.org/${skill.slug}/${skill.color}`}
+                    src={`https://cdn.simpleicons.org/${skill.slug}/${skill.color}.svg`}
                     alt=""
                     aria-hidden="true"
                     width={14}

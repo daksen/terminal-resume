@@ -33,12 +33,11 @@ export default function WelcomeSection() {
         {ASCII_ART}
       </pre>
 
-      <p className="text-terminal-text mb-1">
+      <p className="text-terminal-text mb-6">
         Hi, I&apos;m{" "}
         <span className="text-terminal-pink font-bold">{profile.name}</span> —{" "}
         {profile.title}.
       </p>
-      <p className="text-terminal-muted mb-6">{profile.tagline}</p>
 
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (

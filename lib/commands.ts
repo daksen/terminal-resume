@@ -36,7 +36,7 @@ const clear: CommandHandler = ({ clearHistory, clearInput }) => {
 const whoami: CommandHandler = ({ pushHistory }) => {
   pushHistory([{
     type: "output",
-    text: `${profile.name} — ${profile.title}\n${profile.tagline}`,
+    text: `${profile.name} — ${profile.title}`,
   }]);
 };
 
