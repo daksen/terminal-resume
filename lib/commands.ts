@@ -19,11 +19,11 @@ const help: CommandHandler = ({ pushHistory }) => {
     type: "output",
     text: [
       "Available commands:",
-      "  help     — show this message",
-      "  resume   — open the full resume/portfolio",
-      "  whoami   — display identity",
-      "  ls       — list available pages",
-      "  clear    — clear the terminal",
+      "  help     - show this message",
+      "  resume   - open the full resume/portfolio",
+      "  whoami   - display identity",
+      "  ls       - list available pages",
+      "  clear    - clear the terminal",
     ].join("\n"),
   }]);
 };
@@ -36,7 +36,7 @@ const clear: CommandHandler = ({ clearHistory, clearInput }) => {
 const whoami: CommandHandler = ({ pushHistory }) => {
   pushHistory([{
     type: "output",
-    text: `${profile.name} — ${profile.title}`,
+    text: `${profile.name}: ${profile.title}`,
   }]);
 };
 

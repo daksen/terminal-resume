@@ -3,14 +3,15 @@ import { profile } from "@/lib/data";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="px-4 py-6 sm:px-6 sm:py-8 border-b border-terminal-border">
+    <section id="about" aria-label="About" className="px-4 py-6 sm:px-6 sm:py-8 border-b border-terminal-border">
+      <h2 className="sr-only">About</h2>
       <TerminalPrompt command="cat about.md" />
 
       <div className="flex flex-col sm:flex-row gap-6">
         {/* Bio */}
         <div className="flex-1">
           {profile.bio.map((paragraph, i) => (
-            <p key={i} className="text-terminal-text mb-4 leading-relaxed">
+            <p key={i} className="text-terminal-text mb-4 leading-relaxed max-w-prose">
               {paragraph}
             </p>
           ))}
@@ -38,13 +39,13 @@ export default function AboutSection() {
               <div>
                 <span className="text-terminal-muted">linkedin: </span>
                 <a href={`https://${profile.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-terminal-cyan hover:underline">
-                  {profile.linkedin}
+                  {profile.linkedin} ↗
                 </a>
               </div>
               <div>
                 <span className="text-terminal-muted">github: </span>
                 <a href={`https://${profile.github}`} target="_blank" rel="noopener noreferrer" className="text-terminal-cyan hover:underline">
-                  {profile.github}
+                  {profile.github} ↗
                 </a>
               </div>
             </div>

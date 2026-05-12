@@ -16,19 +16,14 @@
   --color-terminal-purple:  #bb9af7;   /* Purple / Magenta */
   --color-terminal-red:     #f7768e;   /* Red */
   --color-terminal-text:    #c0caf5;   /* Foreground */
-  --color-terminal-muted:   #565f89;   /* Comment */
+  --color-terminal-muted:   #7b85b5;   /* Comment — lightened to 4.78:1 on bg for WCAG AA */
   --color-terminal-blue:    #7aa2f7;   /* Blue */
   --color-terminal-teal:    #73daca;   /* Teal */
 }
 
-:root {
-  --background: #1a1b2e;
-  --foreground: #c0caf5;
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-terminal-bg);
+  color: var(--color-terminal-text);
   font-family: var(--font-geist-mono), ui-monospace, monospace;
 }
 
@@ -36,6 +31,19 @@ body {
   /* Force a font with full box-drawing/block-element coverage for ASCII art */
   .ascii-art {
     font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-terminal-cyan);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

@@ -7,9 +7,9 @@ type Props = {
 
 export default function SectionHeadline({ primary, secondary, meta, muted }: Props) {
   return (
-    <div className="flex items-center gap-2 mb-1">
+    <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 mb-1">
       <span className="text-terminal-green shrink-0">{">"}</span>
-      <span className={muted ? "text-terminal-muted font-semibold" : "text-terminal-cyan font-bold"}>{primary}</span>
+      <h3 className={`m-0 text-sm ${muted ? "text-terminal-muted font-semibold" : "text-terminal-cyan font-bold"}`}>{primary}</h3>
       {secondary && (
         <>
           <span className="text-terminal-muted">@</span>
@@ -17,10 +17,7 @@ export default function SectionHeadline({ primary, secondary, meta, muted }: Pro
         </>
       )}
       {meta && (
-        <>
-          <span className="flex-1" />
-          <span className="text-terminal-muted text-xs">{meta}</span>
-        </>
+        <span className="text-terminal-muted text-xs ml-auto">{meta}</span>
       )}
     </div>
   );

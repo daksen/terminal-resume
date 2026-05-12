@@ -5,14 +5,15 @@ import { skillGroups } from "@/lib/data";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="px-4 py-6 sm:px-6 sm:py-8 border-b border-terminal-border">
+    <section id="skills" aria-label="Skills" className="px-4 py-6 sm:px-6 sm:py-8 border-b border-terminal-border">
+      <h2 className="sr-only">Skills</h2>
       <TerminalPrompt command="ls -la skills" />
 
       <div className="flex flex-col gap-4">
         {skillGroups.map((group) => (
           <div key={group.category}>
             <SectionHeadline primary={group.category} muted />
-            <div className="border-l-2 border-terminal-border pl-4 flex flex-wrap gap-2">
+            <div className="pl-4 flex flex-wrap gap-2">
               {group.skills.map((skill) => (
                 <span
                   key={skill.name}
@@ -24,6 +25,8 @@ export default function SkillsSection() {
                     aria-hidden="true"
                     width={14}
                     height={14}
+                    loading="lazy"
+                    decoding="async"
                     className="inline-block"
                   />
                   {skill.name}
