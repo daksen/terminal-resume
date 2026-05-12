@@ -144,6 +144,13 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
+    name: "Al Fluency Framework & Foundations",
+    issuer: "Anthropic",
+    issuedDate: "May 2026",
+    credentialId: "oaii6hnp737u",
+    url: "https://verify.skilljar.com/c/oaii6hnp737u",
+  },
+  {
     name: "Claude 101",
     issuer: "Anthropic",
     issuedDate: "Mar 2026",
