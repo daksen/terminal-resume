@@ -11,11 +11,7 @@ export default function TerminalWindow({ children }: Props) {
           <span className="w-3 h-3 rounded-full bg-[#ff5f57] border border-[#e0443e]" />
           <span className="w-3 h-3 rounded-full bg-[#febc2e] border border-[#d4a023]" />
           <span className="w-3 h-3 rounded-full bg-[#28c840] border border-[#1aab29]" />
-          <span className="flex-1 text-center text-sm text-terminal-muted select-none">
-            guest@resume:~
-          </span>
         </div>
-
         {/* Body */}
         <div className="bg-terminal-bg font-mono text-terminal-text">
           {children}
