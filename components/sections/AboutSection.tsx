@@ -11,7 +11,7 @@ export default function AboutSection() {
         {/* Bio */}
         <div className="flex-1">
           {profile.bio.map((paragraph, i) => (
-            <p key={i} className="text-terminal-text mb-4 leading-relaxed max-w-prose">
+            <p key={i} className="text-terminal-text mb-4 leading-relaxed">
               {paragraph}
             </p>
           ))}
